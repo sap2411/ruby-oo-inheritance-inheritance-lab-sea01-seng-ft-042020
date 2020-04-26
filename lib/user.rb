@@ -1,5 +1,3 @@
 class User
-    attr_accessor :first_name, :last_name
-    @@all = []
-    
+    attr_accessor :first_name, :last_name, :jim
 end

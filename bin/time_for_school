@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require "pry"
 
 require_relative "../lib/user.rb"
 require_relative "../lib/teacher.rb"
@@ -11,6 +12,20 @@ steve.last_name = "Jobs"
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
+jim = User.new
+jim.first_name = "jim"
+jim.last_name = "audit"
+steve.learn(avi.teach)
+steve.learn(avi.teach)
+steve.learn(avi.teach)
+kylee = Student.new
+kylee.first_name = "kylee"
+kylee.last_name = "lane"
+kylee.learn(avi.teach)
+kylee.learn(avi.teach)
+puts kylee.knowledge
+puts steve.knowledge
+binding.pry
 
 
 some_knowledge = avi.teach 
